@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- Top Things Begin -->
+
+        <RelativeLayout
+            android:id="@+id/topThings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/topBarBack"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="#949694"
+                android:src="@drawable/barimg" />
+
+            <ImageView
+                android:id="@+id/itLogo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/it_solo" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/itLogo"
+                android:src="@drawable/username" />
+
+            <View
+                android:id="@+id/mostright"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:background="#ffff" />
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/mostright"
+                android:background="#ffff" />
+        </RelativeLayout>
+        <!-- Top Things End -->
+
+
+        <!-- Overview Begin -->
+
+        <RelativeLayout
+            android:id="@+id/overviewBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topBar"
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textresumo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topBar"
+                android:text="Resumo"
+                android:textColor="@color/White"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/texttotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textresumo"
+                android:layout_marginLeft="5dp"
+                android:text="Total"
+                android:textColor="@color/White" />
+
+            <TextView
+                android:id="@+id/textmedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttotal"
+                android:layout_marginLeft="5dp"
+                android:text="Média"
+                android:textColor="@color/White" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textresumo"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/textmedia"
+                android:text="$$$$$" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttotal"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/textmedia"
+                android:text="$$$$$" />
+        </RelativeLayout>
+        <!-- Overview Ends -->
+        
+         <View
+                style="@style/Line"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/overviewBar" />
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        <RelativeLayout
+            android:id="@+id/barslayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textalim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:text="Alimentação"
+                android:textColor="@color/White"
+                android:textSize="17dp" 
+                android:layout_below="@+id/overviewBar"/>
+            
+            
+            
+
+            <ImageView
+                android:id="@+id/alimentacaoBuild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textalim"
+                android:src="@drawable/alimentacaobuild" />
+
+            <View
+                style="@style/Line"
+                android:layout_below="@+id/alimentacaoBuild" />
+
+ 
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

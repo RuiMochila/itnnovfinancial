@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/contextElement1" android:title="Descer por Natureza"></item>
+    <item android:id="@+id/contextElement2" android:title="Ver as Transacções"></item>
+    
+
+</menu>
