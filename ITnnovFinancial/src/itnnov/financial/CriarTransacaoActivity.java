@@ -19,13 +19,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class CriarTransacaoActivity extends Activity {
-	CriarTransacaoActivity me = this;
-
+	private CriarTransacaoActivity me = this;
+	private ArrayList<String> lista;
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.criar_transacao);
 
-		ArrayList<String> lista = getIntent().getStringArrayListExtra("Transacao");
+		lista = getIntent().getStringArrayListExtra("Transacao");
 
 		if (lista != null) {
 			descricao = (EditText) findViewById(R.id.criar_transacao_box_descricao);
@@ -117,7 +118,26 @@ public class CriarTransacaoActivity extends Activity {
 		Button salvar = (Button) findViewById(R.id.criar_transicao_botao_criar);
 		salvar.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-
+				if (lista != null) {
+					lista = new ArrayList<String>();
+					lista.add(descricao.getText().toString());
+					if(date.getDayOfMonth() < 10)
+						lista.add("0"+date.getDayOfMonth() + "/");
+					else
+						lista.add(date.getDayOfMonth() + "/");
+					int month = date.getMonth() + 1;
+					if(date.getMonth() < 9)
+						lista.add("0"+month + "/");
+					else
+						lista.add(month + "/");
+					lista.add(date.getYear() + "");
+					valor = (EditText) findViewById(R.id.Valor_box);
+					lista.add(valor.getText().toString());
+					Intent returnIntent = new Intent();
+					returnIntent.putExtra("Transacao", lista);
+					setResult(RESULT_OK, returnIntent);
+					finish();
+				}
 			}
 
 		});
@@ -139,6 +159,7 @@ public class CriarTransacaoActivity extends Activity {
 
 	private RadioButton gastos;
 	private EditText descricao;
+	private EditText valor;
 	private Button categorias;
 	private Button salvar;
 	private Intent myIntent;
