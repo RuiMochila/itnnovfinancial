@@ -37,20 +37,20 @@
                 android:layout_toRightOf="@+id/itLogo"
                 android:src="@drawable/username" />
 
-            <View
+            <ImageView
                 android:id="@+id/mostright"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="5dp"
-                android:background="#ffff" />
+                android:src="@drawable/usericon" />
 
-            <View
+            <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginRight="5dp"
                 android:layout_toLeftOf="@+id/mostright"
-                android:background="#ffff" />
+                android:src="@drawable/databaseicon" />
         </RelativeLayout>
         <!-- Top Things End -->
 
@@ -109,23 +109,12 @@
                 android:text="$$$$$" />
         </RelativeLayout>
         <!-- Overview Ends -->
-        
-         <View
-                style="@style/Line"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/overviewBar" />
 
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
+        <View
+            style="@style/Line"
+            android:layout_below="@+id/overviewBar"
+            android:layout_marginTop="5dp" />
+
         <RelativeLayout
             android:id="@+id/barslayout"
             android:layout_width="fill_parent"
@@ -136,14 +125,11 @@
                 android:id="@+id/textalim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/overviewBar"
                 android:layout_marginTop="110dp"
                 android:text="Alimentação"
                 android:textColor="@color/White"
-                android:textSize="17dp" 
-                android:layout_below="@+id/overviewBar"/>
-            
-            
-            
+                android:textSize="17dp" />
 
             <ImageView
                 android:id="@+id/alimentacaoBuild"
@@ -155,9 +141,6 @@
             <View
                 style="@style/Line"
                 android:layout_below="@+id/alimentacaoBuild" />
-
- 
-
         </RelativeLayout>
     </RelativeLayout>
 

@@ -8,12 +8,64 @@
         android:layout_height="fill_parent"
         android:orientation="vertical" >
 
+        
+        <!-- Alterações a partir daqui -->
+        <!-- Top Things Begin -->
+
+        <RelativeLayout
+            android:id="@+id/topThings"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/topBarBack"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="#949694"
+                android:src="@drawable/barimg" />
+
+            <ImageView
+                android:id="@+id/itLogo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/it_solo" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/itLogo"
+                android:src="@drawable/username" />
+
+            <ImageView
+                android:id="@+id/mostright"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/usericon" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/mostright"
+                android:src="@drawable/databaseicon" />
+        </RelativeLayout>
+        <!-- Top Things End -->
+        <!-- Até aqui -->
+
+
+        <!-- Aqui no teu acrescentei uma top margin de 5dp -->
         <TextView
             android:id="@+id/criar_transacao_text_descricao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Descrição"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="5dp" />
 
         <EditText
             android:id="@+id/criar_transacao_box_descricao"

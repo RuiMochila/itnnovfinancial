@@ -37,20 +37,20 @@
                 android:layout_toRightOf="@+id/itLogo"
                 android:src="@drawable/username" />
 
-            <View
+            <ImageView
                 android:id="@+id/mostright"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="5dp"
-                android:background="#ffff" />
+                android:src="@drawable/usericon" />
 
-            <View
+            <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginRight="5dp"
                 android:layout_toLeftOf="@+id/mostright"
-                android:background="#ffff" />
+                android:src="@drawable/databaseicon" />
         </RelativeLayout>
         <!-- Top Things End -->
 
@@ -75,11 +75,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textrestaur"
                 android:src="@drawable/restauracaobuild" />
-            
-            <View style="@style/Line"
-                android:layout_below="@+id/restauracaoBuild"/>
-            
 
+            <View
+                style="@style/Line"
+                android:layout_below="@+id/restauracaoBuild" />
         </RelativeLayout>
     </RelativeLayout>
 
