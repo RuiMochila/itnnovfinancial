@@ -129,6 +129,23 @@ public class ITnnovFinancialActivity extends Activity {
 		return true;
 	}
 
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.item2:
+			//Gerir Transacções
+			Intent myIntent = new Intent(this, CriarTransacaoActivity.class).putStringArrayListExtra("Transacao", null);
+            startActivityForResult(myIntent, 0); 
+			return true;
+		case R.id.item7:
+			//Gerir Categorias
+			Intent intent_consultar_categorias = new Intent(this, ConsultarTransacoesActivity.class).putExtra("Codigo Categorias","categoria, valor"); 
+			startActivityForResult(intent_consultar_categorias, 0);
+            return true;
+		default:
+			return false;
+		}
+	}
+	
 	public void onCreateContextMenu(ContextMenu menu, View v,
 			ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
@@ -146,7 +163,7 @@ public class ITnnovFinancialActivity extends Activity {
 
 			return true;
 		case R.id.contextElement2:
-			//Do nothing
+			//do nothing
 			return true;
 		default:
 			return false;

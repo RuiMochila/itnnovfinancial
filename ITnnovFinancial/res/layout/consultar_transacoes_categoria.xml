@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#404040"
+            android:visibility="visible" >
+
+            <TableRow
+                android:id="@+id/tableRow0"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingBottom="3dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:paddingRight="1dp"
+                    android:weightSum="0.5" >
+
+                    <TextView
+                        android:id="@+id/TextView00"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:background="#ffffffff"
+                        android:paddingRight="3dp"
+                        android:text="Descrição"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:paddingRight="1dp"
+                    android:weightSum="0.5" >
+
+                    <TextView
+                        android:id="@+id/TextView01"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:background="#ffffffff"
+                        android:paddingRight="3dp"
+                        android:text="Valor"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:paddingRight="1dp"
+                    android:weightSum="0.5" >
+
+                    <TextView
+                        android:id="@+id/TextView02"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:background="#ffffffff"
+                        android:paddingRight="3dp"
+                        android:text="Data"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:paddingRight="1dp"
+                    android:weightSum="0.25" >
+
+                    <TextView
+                        android:id="@+id/TextView04"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:background="#ffffffff"
+                        android:paddingRight="3dp"
+                        android:text="Editar"
+                        android:textColor="#404040" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingBottom="3dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="Pagamento da luz"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#ffffffff"
+                        android:paddingRight="3dp"
+                        android:text="-$$$$"
+                        android:textColor="#ff40" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="11/11/2010"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.15"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:paddingRight="1dp"
+                    android:weightSum="0.25" >
+
+                    <Button
+                        android:id="@+id/transacao_editar_botao1"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="Editar"
+                        android:textColor="#404040" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingBottom="3dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView05"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="Pagamento da luz"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView06"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#ffffffff"
+                        android:paddingRight="3dp"
+                        android:text="-$$$$"
+                        android:textColor="#ff40" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView03"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="11/12/2010"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.15"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:paddingRight="1dp"
+                    android:weightSum="0.25" >
+
+                    <Button
+                        android:id="@+id/Button01"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="Editar"
+                        android:textColor="#404040" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingBottom="3dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView15"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="Pagamento da luz"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView13"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#ffffffff"
+                        android:paddingRight="3dp"
+                        android:text="-$$$$"
+                        android:textColor="#ff40" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView14"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="11/01/2011"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.15"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:paddingRight="1dp"
+                    android:weightSum="0.25" >
+
+                    <Button
+                        android:id="@+id/Button03"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="Editar"
+                        android:textColor="#404040" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingBottom="3dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView08"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="Pagamento da luz"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView09"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#ffffffff"
+                        android:paddingRight="3dp"
+                        android:text="-$$$$"
+                        android:textColor="#ff40" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView07"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="11/02/2011"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.15"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:paddingRight="1dp"
+                    android:weightSum="0.25" >
+
+                    <Button
+                        android:id="@+id/Button02"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="Editar"
+                        android:textColor="#404040" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingBottom="3dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView20"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="Pagamento da luz"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView19"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#ffffffff"
+                        android:paddingRight="3dp"
+                        android:text="-$$$$"
+                        android:textColor="#ff40" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView21"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="11/03/2011"
+                        android:textColor="#404040" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.15"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:paddingRight="1dp"
+                    android:weightSum="0.25" >
+
+                    <Button
+                        android:id="@+id/Button05"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="Editar"
+                        android:textColor="#404040" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/TableRow6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingBottom="3dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView17"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="Pagamento da luz"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView18"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#ffffffff"
+                        android:paddingRight="3dp"
+                        android:text="-$$$$"
+                        android:textColor="#ff40" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.25"
+                    android:paddingRight="1dp" >
+
+                    <TextView
+                        android:id="@+id/TextView16"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="#ffffffff"
+                        android:clickable="false"
+                        android:editable="true"
+                        android:paddingRight="3dp"
+                        android:text="11/04/2011"
+                        android:textColor="#404040" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.15"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:paddingRight="1dp"
+                    android:weightSum="0.25" >
+
+                    <Button
+                        android:id="@+id/Button04"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="Editar"
+                        android:textColor="#404040" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

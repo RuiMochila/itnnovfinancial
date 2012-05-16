@@ -20,6 +20,9 @@
         </activity>
         <activity android:name="AlimentacaoActivity"></activity>
         <activity android:name="RestauracaoActivity"></activity>
+        <activity android:name="ConsultarTransacoesActivity"></activity>
+        <activity android:name="ConsultarTransacoesCategoriaActivity"></activity>
+        <activity android:name="CriarTransacaoActivity"></activity>
     </application>
 
 </manifest>

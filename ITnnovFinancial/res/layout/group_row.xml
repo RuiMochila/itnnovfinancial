@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+<ImageView android:src="@drawable/expander_group"
+	android:id="@+id/explist_indicator"
+	android:layout_width="12px"
+	android:layout_height="12px"/>
+<TextView android:id="@+id/groupname"
+         android:textSize="12px"
+         android:textStyle="bold"
+		 android:paddingLeft="15px"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"/>
+</LinearLayout>
