@@ -297,19 +297,42 @@
             android:textColor="@color/White"
             android:textSize="17dp" />
 
-        <TextView
-            android:id="@+id/textcomparacaomesanterior"
+
+        <ImageView 
+            android:id="@+id/imagemcomparacao"
+            android:src="@drawable/comparacao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lineeventos"
-            android:text="Comparação Últimos Periodos"
-            android:textColor="@color/White"
-            android:textSize="17dp" />
+            android:layout_below="@+id/textcomparacao"/>
 
         <View
             android:id="@+id/linecomparacao"
             style="@style/Line"
-            android:layout_below="@+id/textcomparacao" />
+            android:layout_below="@+id/imagemcomparacao" />
+        
+        
+        <TextView
+            android:id="@+id/textpiechartmedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linecomparacao"
+            android:text="Gastos por Natureza Currente"
+            android:textColor="@color/White"
+            android:textSize="17dp" />
+        
+        <ImageView
+                android:id="@+id/pieChartMedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textpiechartmedia"
+                android:layout_gravity="center"
+                android:cropToPadding="true"
+                android:src="@drawable/pie1" />
+        
+        <View
+            android:id="@+id/linepiechartmedia"
+            style="@style/Line"
+            android:layout_below="@+id/pieChartMedia" />
         <!-- Atenção ids e ref acima -->
 
     </RelativeLayout>
