@@ -5,6 +5,10 @@ import android.app.ExpandableListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -50,6 +54,9 @@ public class ConsultarTransacoesActivity extends ExpandableListActivity {
 	private List<String> Categorias;
 	private ArrayList<ArrayList<String>> subCategorias;
 	private SimpleExpandableListAdapterWithEmptyGroups expListAdapter;
+	private int groupPosition;
+	private int childPosition;
+	private int type;
 
 	public void inicializaCategorias() {
 		Categorias = new ArrayList<String>();
@@ -93,70 +100,16 @@ public class ConsultarTransacoesActivity extends ExpandableListActivity {
 						R.id.valor });
 		setListAdapter(expListAdapter);
 		onContentChanged();
-
+		
+		registerForContextMenu(getExpandableListView());
+		
 		getExpandableListView().setOnItemLongClickListener(new OnItemLongClickListener() {
 			public boolean onItemLongClick(AdapterView<?> parent,
 					View view, int position, final long id) {
-				dialog_cria_categoria = new Dialog(me);
-				dialog_cria_categoria.setContentView(R.layout.popup_cria_categoria);
-				dialog_cria_categoria.setCancelable(true);
-
-				popup_categoria_box = (TextView) dialog_cria_categoria.findViewById(R.id.popup_cria_categoria_box);
-
-				Button button_cancel = (Button) dialog_cria_categoria
-								.findViewById(R.id.popup_cria_categoria_button_cancelar);
-				button_cancel.setOnClickListener(new OnClickListener() {
-					public void onClick(View v) {
-						dialog_cria_categoria.dismiss();
-					}
-				});
-
-				Button button_ok = (Button) dialog_cria_categoria.findViewById(R.id.popup_cria_categoria_button_criar);
-				button_ok.setOnClickListener(new OnClickListener() {
-					public void onClick(View v) {
-						if (ExpandableListView.getPackedPositionType(id) == ExpandableListView.PACKED_POSITION_TYPE_CHILD) {
-							int groupPosition = ExpandableListView.getPackedPositionGroup(id);
-							int childPosition = ExpandableListView.getPackedPositionChild(id);
-
-							categoriaNova = popup_categoria_box.getText().toString();
-
-							String pai = Categorias.get(groupPosition);
-							subCategorias.get(ExpandableListView.getPackedPositionGroup(id)).add(categoriaNova);
-							subCategorias.get(ExpandableListView.getPackedPositionGroup(id)).add("0");
-
-							// nao da para fazer subcategorias dos filhos era necessario uma
-							// implementacao especializada
-//							Log.i("You clicked here:", "clicou no filho");
-							dialog_cria_categoria.dismiss();
-
-						} else {
-							// Log.i("You clicked here:", "clicou no pai");
-
-							categoriaNova = popup_categoria_box.getText().toString();
-
-							if (((CompoundButton) dialog_cria_categoria.findViewById(R.id.popup_cria_categoria_radiobutton_categoria))
-									.isChecked()) {
-								Categorias.add(categoriaNova);
-								subCategorias.add(new ArrayList<String>());
-							} else {
-								String pai = Categorias.get(ExpandableListView.getPackedPositionGroup(id));
-								subCategorias.get(ExpandableListView.getPackedPositionGroup(id)).add(categoriaNova);
-								subCategorias.get(ExpandableListView.getPackedPositionGroup(id)).add("0");
-							}
-						}
-						expListAdapter = new SimpleExpandableListAdapterWithEmptyGroups(
-								me, createGroupList(), R.layout.group_row,
-								new String[] { "Categorias" },
-								new int[] { R.id.groupname },
-								createChildList(), R.layout.child_row,
-								new String[] { "subCategorias", "valor" },
-								new int[] { R.id.childname, R.id.valor });
-						setListAdapter(expListAdapter);
-						expListAdapter.notifyDataSetChanged();
-						dialog_cria_categoria.dismiss();
-					}
-				});
-				dialog_cria_categoria.show();
+				
+				groupPosition = ExpandableListView.getPackedPositionGroup(id);
+				childPosition = ExpandableListView.getPackedPositionChild(id);
+				type = ExpandableListView.getPackedPositionType(id);
 				return false;
 			}
 		});
@@ -204,6 +157,96 @@ public class ConsultarTransacoesActivity extends ExpandableListActivity {
 
 	}
 
+	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.contextmenucategorias, menu);
+    }
+	
+	public boolean onContextItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case R.id.contextElementCriar:
+        	dialog_cria_categoria = new Dialog(me);
+			dialog_cria_categoria.setContentView(R.layout.popup_cria_categoria);
+			dialog_cria_categoria.setCancelable(true);
+
+			popup_categoria_box = (TextView) dialog_cria_categoria.findViewById(R.id.popup_cria_categoria_box);
+
+			Button button_cancel = (Button) dialog_cria_categoria.findViewById(R.id.popup_cria_categoria_button_cancelar);
+			button_cancel.setOnClickListener(new OnClickListener() {
+				public void onClick(View v) {
+					dialog_cria_categoria.dismiss();
+				}
+			});
+
+			Button button_ok = (Button) dialog_cria_categoria.findViewById(R.id.popup_cria_categoria_button_criar);
+			button_ok.setOnClickListener(new OnClickListener() {
+				public void onClick(View v) {
+					if (type == ExpandableListView.PACKED_POSITION_TYPE_CHILD) {
+
+						categoriaNova = popup_categoria_box.getText().toString();
+
+						String pai = Categorias.get(groupPosition);
+						subCategorias.get(groupPosition).add(categoriaNova);
+						subCategorias.get(groupPosition).add("0");
+
+						// nao da para fazer subcategorias dos filhos era necessario uma
+						// implementacao especializada
+//						Log.i("You clicked here:", "clicou no filho");
+						dialog_cria_categoria.dismiss();
+
+					} else {
+						// Log.i("You clicked here:", "clicou no pai");
+
+						categoriaNova = popup_categoria_box.getText().toString();
+
+						if (((CompoundButton) dialog_cria_categoria.findViewById(R.id.popup_cria_categoria_radiobutton_categoria))
+								.isChecked()) {
+							Categorias.add(categoriaNova);
+							subCategorias.add(new ArrayList<String>());
+						} else {
+							String pai = Categorias.get(groupPosition);
+							subCategorias.get(groupPosition).add(categoriaNova);
+							subCategorias.get(groupPosition).add("0");
+						}
+					}
+					expListAdapter = new SimpleExpandableListAdapterWithEmptyGroups(
+							me, createGroupList(), R.layout.group_row,
+							new String[] { "Categorias" },
+							new int[] { R.id.groupname },
+							createChildList(), R.layout.child_row,
+							new String[] { "subCategorias", "valor" },
+							new int[] { R.id.childname, R.id.valor });
+					setListAdapter(expListAdapter);
+					expListAdapter.notifyDataSetChanged();
+					dialog_cria_categoria.dismiss();
+				}
+			});
+			dialog_cria_categoria.show();
+            return true;
+        case R.id.contextElementApagar:
+        	if (type == ExpandableListView.PACKED_POSITION_TYPE_CHILD) {
+				String pai = Categorias.get(groupPosition);
+				subCategorias.get(groupPosition).remove(childPosition);
+				subCategorias.get(groupPosition).remove(childPosition + 1);
+			} else
+				Categorias.remove(groupPosition);
+        	
+        	expListAdapter = new SimpleExpandableListAdapterWithEmptyGroups(
+					me, createGroupList(), R.layout.group_row,
+					new String[] { "Categorias" },
+					new int[] { R.id.groupname },
+					createChildList(), R.layout.child_row,
+					new String[] { "subCategorias", "valor" },
+					new int[] { R.id.childname, R.id.valor });
+			setListAdapter(expListAdapter);
+			expListAdapter.notifyDataSetChanged();
+            return true;
+        default:
+            return false;
+        }
+    }
+	
 	private List createGroupList() {
 		ArrayList result = new ArrayList();
 		for (int i = 0; i < Categorias.size(); ++i) {
