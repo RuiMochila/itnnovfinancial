@@ -227,10 +227,14 @@ public class ConsultarTransacoesActivity extends ExpandableListActivity {
         case R.id.contextElementApagar:
         	if (type == ExpandableListView.PACKED_POSITION_TYPE_CHILD) {
 				String pai = Categorias.get(groupPosition);
-				subCategorias.get(groupPosition).remove(childPosition);
-				subCategorias.get(groupPosition).remove(childPosition + 1);
-			} else
+				subCategorias.get(groupPosition).remove(childPosition * 2);
+				subCategorias.get(groupPosition).remove(childPosition * 2);
+				Log.i("You clicked here:", "clicou no filho2");
+			} else{
+				subCategorias.get(groupPosition).removeAll(subCategorias.get(groupPosition));
 				Categorias.remove(groupPosition);
+				Log.i("You clicked here:", "clicou no pai");
+			}
         	
         	expListAdapter = new SimpleExpandableListAdapterWithEmptyGroups(
 					me, createGroupList(), R.layout.group_row,
