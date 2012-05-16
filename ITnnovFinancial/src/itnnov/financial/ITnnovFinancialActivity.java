@@ -140,6 +140,7 @@ public class ITnnovFinancialActivity extends Activity {
 			//Gerir Categorias
 			Intent intent_consultar_categorias = new Intent(this, ConsultarTransacoesActivity.class).putExtra("Codigo Categorias","categoria, valor"); 
 			startActivityForResult(intent_consultar_categorias, 0);
+			
             return true;
 		default:
 			return false;
