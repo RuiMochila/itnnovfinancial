@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
-
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                 android:layout_height="30dp"
                 android:layout_marginRight="5dp"
                 android:layout_toLeftOf="@+id/mostright"
-                android:background="#ffff" />
+                android:background="#ffff" />
             -->
 
             <ImageView
@@ -67,9 +67,7 @@
                 android:layout_height="30dp"
                 android:layout_marginRight="5dp"
                 android:layout_toLeftOf="@+id/mostright"
-                android:src="@drawable/databaseicon"
-                 />
-            
+                android:src="@drawable/databaseicon" />
         </RelativeLayout>
         <!-- Top Things End -->
 
@@ -297,20 +295,11 @@
             android:textColor="@color/White"
             android:textSize="17dp" />
 
-
-        <ImageView 
-            android:id="@+id/imagemcomparacao"
-            android:src="@drawable/comparacao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textcomparacao"/>
-
         <View
             android:id="@+id/linecomparacao"
-            style="@style/Line"
-            android:layout_below="@+id/imagemcomparacao" />
-        
-        
+            style="@style/Line" 
+            android:layout_below="@+id/imagemcomparacao"/>
+
         <TextView
             android:id="@+id/textpiechartmedia"
             android:layout_width="wrap_content"
@@ -319,21 +308,31 @@
             android:text="Gastos por Natureza Currente"
             android:textColor="@color/White"
             android:textSize="17dp" />
-        
+
         <ImageView
-                android:id="@+id/pieChartMedia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textpiechartmedia"
-                android:layout_gravity="center"
-                android:cropToPadding="true"
-                android:src="@drawable/pie1" />
-        
+            android:id="@+id/pieChartMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textpiechartmedia"
+            android:layout_gravity="center"
+            android:cropToPadding="true"
+            android:src="@drawable/pie1" />
+
         <View
             android:id="@+id/linepiechartmedia"
             style="@style/Line"
             android:layout_below="@+id/pieChartMedia" />
         <!-- Atenção ids e ref acima -->
+
+        <ImageView
+            android:id="@+id/imagemcomparacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/textevento1"
+            android:cropToPadding="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/comparacao" />
 
     </RelativeLayout>
 
