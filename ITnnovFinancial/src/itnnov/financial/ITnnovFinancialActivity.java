@@ -136,7 +136,7 @@ public class ITnnovFinancialActivity extends Activity {
 			Intent myIntent = new Intent(this, CriarTransacaoActivity.class).putStringArrayListExtra("Transacao", null);
             startActivityForResult(myIntent, 0); 
 			return true;
-		case R.id.item7:
+		case R.id.item8:
 			//Gerir Categorias
 			Intent intent_consultar_categorias = new Intent(this, ConsultarTransacoesActivity.class).putExtra("Codigo Categorias","categoria, valor"); 
 			startActivityForResult(intent_consultar_categorias, 0);

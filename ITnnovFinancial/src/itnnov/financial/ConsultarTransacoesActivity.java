@@ -86,7 +86,8 @@ public class ConsultarTransacoesActivity extends ExpandableListActivity {
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		setContentView(R.layout.consultar_transacoes);
-
+		
+		
 		inicializaCategorias();
 		inicializaSubCategorias();
 
@@ -102,6 +103,7 @@ public class ConsultarTransacoesActivity extends ExpandableListActivity {
 		onContentChanged();
 		
 		registerForContextMenu(getExpandableListView());
+		
 		
 		getExpandableListView().setOnItemLongClickListener(new OnItemLongClickListener() {
 			public boolean onItemLongClick(AdapterView<?> parent,
