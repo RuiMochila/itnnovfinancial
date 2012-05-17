@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:id="@+id/item1" android:title="Reporting">
+    <item android:id="@+id/item1" android:title="Análise de Dados">
         <menu>
-            <item android:id="@+id/item3" android:title="Some Report"/>
-            <item android:id="@+id/item4" android:title="Other Report"/>
+            <item android:id="@+id/item3" android:title="Gastos por Categoria"/>
+            <item android:id="@+id/item4" android:title="Rendimentos por Categoria"/>
+            <item android:id="@+id/item5" android:title="Gastos Mensalmente por Categoria"/>
+            <item android:id="@+id/item6" android:title="Rendimentos Mensalmente por Categoria"/>
+            <item android:id="@+id/item7" android:title="Outra Análise Relevante"/>
         </menu>
     </item>
-    <item android:id="@+id/item2" android:title="Criar Transacções"></item>
-    <item android:id="@+id/item7" android:title="Vista Detalhada"></item>
+    <item android:id="@+id/item2" android:title="Criar Transacção"></item>
+    <item android:id="@+id/item8" android:title="Vista Detalhada"></item>
     
 
 </menu>

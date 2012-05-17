@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
-
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                 android:layout_height="30dp"
                 android:layout_marginRight="5dp"
                 android:layout_toLeftOf="@+id/mostright"
-                android:background="#ffff" />
+                android:background="#ffff" />
             -->
 
             <ImageView
@@ -286,25 +286,13 @@
             style="@style/Line"
             android:layout_below="@+id/textevento2" />
 
-        <TextView
-            android:id="@+id/textcomparacao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/lineeventos"
-            android:text="Comparação Últimos Periodos"
-            android:textColor="@color/White"
-            android:textSize="17dp" />
 
-        <View
-            android:id="@+id/linecomparacao"
-            style="@style/Line" 
-            android:layout_below="@+id/imagemcomparacao"/>
 
         <TextView
             android:id="@+id/textpiechartmedia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/linecomparacao"
+            android:layout_below="@+id/lineeventos"
             android:text="Gastos por Natureza Currente"
             android:textColor="@color/White"
             android:textSize="17dp" />
@@ -324,16 +312,26 @@
             android:layout_below="@+id/pieChartMedia" />
         <!-- Atenção ids e ref acima -->
 
+        <TextView
+            android:id="@+id/textcomparacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linepiechartmedia"
+            android:text="Comparação Últimos Periodos"
+            android:textColor="@color/White"
+            android:textSize="17dp" />
+
         <ImageView
             android:id="@+id/imagemcomparacao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignTop="@+id/textevento1"
+            android:layout_below="@+id/textcomparacao"
             android:cropToPadding="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="320dp"
+            android:layout_marginRight="5dp"
             android:src="@drawable/comparacao" />
-
     </RelativeLayout>
 
 </ScrollView>
