@@ -137,7 +137,8 @@ public class CriarTransacaoActivity extends Activity {
 					returnIntent.putExtra("Transacao", lista);
 					setResult(RESULT_OK, returnIntent);
 					finish();
-				}
+				}else
+					finish();
 			}
 
 		});
